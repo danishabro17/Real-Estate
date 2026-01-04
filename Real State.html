@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real State</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        html{
+          scroll-behavior: smooth;
+        }
+        body{
+          padding-top: 70px;
+        }
+.heading1{
+    padding: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: left;
+    font-size: 4rem;
+    display: block;
+        color: #2d3436;
+    }
+.heading2{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 10px;;
+    text-align: left;
+    font-size: 4rem;
+     color: #2d3436;
+    display: block;
+}
+.heading3{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     color: #2d3436;
+    padding: 10px;
+    text-align:left;
+    font-size: 4rem;
+}
+.navbar{
+    height: 70px;
+    background-color: navy;
+    border-radius: 10px;
+   width: 100%;
+   /* position: relative; */
+   position: fixed;
+   top: 0%;
+   left: 0%;
+   width: 100%;
+   z-index: 1000;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.logo{
+    margin-top: 20px;
+    font-weight: bold;
+    color: #d8e0eb;
+    display: inline;
+    padding-top:120px;
+    padding-left: 30px;
+    text-align: start;
+ font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+padding-top: 35px;
+}
+a{
+    height: 5px;
+    width: 10px;
+    text-align: end;
+    text-decoration: none;
+    justify-content:space-between;
+    margin: 50px;
+    color:darkgray;
+    font-weight: 600;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+a:hover{
+    color: #F39C12;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+nav{
+    text-align: center;
+    height: 40px;
+    padding-bottom: 27px;
+}
+.paraL1{
+    margin-left: 10px;
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+}
+.paraL2{
+    margin-left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+}
+button{
+  height: 30px;
+  width: 90px;
+  border: 2px solid white;
+  border-radius: 20px;
+  background-color:#20b2AA;
+  margin-left: auto;
+  transition: 0.3s;
+}
+button:hover{
+    background-color: #008B8b;
+    transform: scale(1.1);
+}
+.maindiv{
+ background-image: url(Baground\ new.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 500px;
+           border-radius:20px; 
+}
+.thirdheadingdiv{
+  padding: 30px;
+  font-size: 1.5rem;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ 
+}
+.seconddiv{
+    background-color: #ebf0f5;
+    height: 1380px;
+}
+.mainparaone{
+    padding-left: 2px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    display: block;
+    
+}
+.mainparatwo{
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+}
+.mainparathree{
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+}
+.mainheading{
+    margin-bottom: 10px;
+}
+.centerbutton{
+    margin-left: 1200px;
+    background-color: azure;
+    border: 3px solid blue;
+    font-weight: 500;
+}
+:root {
+  --primary-blue: #3b82f6;
+  --text-gray: #6b7280;
+  --label-gray: #374151;
+}
+
+.search-container {
+  padding: 20px;
+  background: transparent; /* Assuming it sits on your blue background */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.search-group {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  flex: 1;
+  border-right: 1px solid #e5e7eb; /* The vertical divider */
+}
+
+/* Remove the border from the last group before the button */
+.search-group:nth-child(3) {
+  border-right: none;
+}
+
+.search-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--label-gray);
+  margin-bottom: 4px;
+}
+
+.search-group select, 
+.search-group input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: var(--text-gray);
+  background: transparent;
+  width: 100%;
+}
+
+.search-btn {
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  /* padding: 12px 24px; */
+  border-radius: 8px;
+  font: weight 600px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+
+.search-btn:hover {
+  background-color: #2563eb;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .search-group {
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+}
+/* GRID */
+.cards-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:25px;
+}
+
+/* CARD */
+.property-card{
+    background:#fff;
+    border-radius:14px;
+    overflow:hidden;
+    cursor:pointer;
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 250px;
+}
+
+.property-card:hover{
+    transform:scale(1.05);
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* IMAGE */
+.property-img img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+/* CONTENT */
+.property-content{
+    padding:18px;
+}
+
+.price{
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:6px;
+}
+
+.title{
+    font-size:16px;
+    font-weight:600;
+    margin-bottom:6px;
+}
+
+.address{
+    font-size:14px;
+    color:#777;
+    margin-bottom:14px;
+    line-height:1.4;
+}
+
+/* DETAILS */
+.details{
+    display:flex;
+    justify-content:space-between;
+    font-size:14px;
+    color:#444;
+}
+
+.details span{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+.thirddiv{
+  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.main-container {
+    display: flex;          /* Isse image aur text ek line mein aa jayenge */
+    align-items: center;    /* Vertical center karne ke liye */
+    gap: 40px;             /* Image aur text ke darmiyan gap */
+    padding: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.image-box {
+    flex: 1;               /* Image container ko barabar space dene ke liye */
+}
+
+.image-box img {
+    width: 100%;
+    border-radius: 20px;   /* Jesa aapki pic mein hai */
+    display: block;
+}
+
+.text-box {
+    flex: 1;               /* Text container ko barabar space dene ke liye */
+}
+
+.heading {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.description {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.check {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #999;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    font-size: 12px;
+    color: #555;
+}
+/* for ad2 */
+.renovation-section {
+    font-family: 'Montserrat', sans-serif;
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.container {
+    display: flex;           /* Isse image aur text side-by-side aayenge */
+    align-items: center;     /* Vertical alignment center karne ke liye */
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 50px;              /* Image aur text ke beech ka fasla */
+}
+
+.image-area {
+    flex: 1;                /* Dono ko barabar jagah dene ke liye */
+}
+
+.image-area img {
+    width: 100%;
+    border-radius: 30px;    /* Smooth rounded corners jaisa pic mein hai */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.content-area {
+    flex: 1;
+}
+
+.main-heading {
+    font-size: 36px;
+    color: #1a1a1a;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.sub-text {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #444;
+    font-weight: 500;
+}
+
+.icon {
+    width: 22px;
+    height: 22px;
+    border: 1.5px solid #4a90e2; /* Blue outline */
+    color: #4a90e2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* Responsive: Mobile par ek ke neeche ek ho jaye */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .icon {
+        margin-right: 10px;
+    }
+    .feature-list li {
+        justify-content: center;
+    }
+}
+:root {
+    --bg-color: #f8f9fa;
+    --text-dark: #1c1c1c;
+    --star-color: #ffb400;
+}
+
+.testimonial {
+    padding: 60px 20px;
+    background-color: var(--bg-color);
+    font-family: sans-serif;
+}
+
+.container { max-width: 1000px; margin: auto; }
+
+/* Heading Section */
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.h2-title { font-size: 32px; color: var(--text-dark); line-height: 1.2; }
+
+.view-btn {
+
+border: 3px solid blue;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+display: inline-flex;
+margin-left: 10px;
+background-color: #2563eb;
+color: white;
+cursor: pointer;
+font-weight: bold;
+
+
+
+     /* border: 3px solid #0f80f9;
+    background:skyblue;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #1a1a1a; */
+} 
+
+/* Avatar Overlap */
+.avatar-group { display: flex; margin-bottom: 40px; }
+
+.avatar-group img, .more-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-left: -12px;
+}
+
+.avatar-group img:first-child { margin-left: 0; }
+
+.more-avatar {
+    background: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+  Cards Grid
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.testi-card {
+    height: 300px;
+    border-radius: 15px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    color: white;
+    overflow: hidden;
+}
+
+Background Images for Cards
+.card-1 { background-image: linear-gradient(to top, rgba(0,0,0,0.7), transparent), url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=500'); }
+.card-2 { background-image: linear-gradient(to top, rgba(0,0,0,0.7), transparent), url('https://images.unsplash.com/photo-1511895426328-dc8714191300?w=500'); }
+
+.card-content { flex-grow: 1; }
+
+.name { font-weight: bold; margin-bottom: 5px; font-size: 18px; }
+
+.stars { color: var(--star-color); letter-spacing: 2px; }
+
+.score { margin-left: 8px; font-size: 14px; opacity: 0.9; }
+
+.user-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+/* .card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 4 columns:;
+    gap: 20px;
+    max-width: 1100px;
+    width: 100%;
+}  */
+
+/* Responsive adjustment for small screens */
+@media (max-width: 900px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Individual Card Styling */
+.profile-card {
+    position: relative;
+    height: 360px;
+    border-radius: 18px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    overflow: hidden;
+    color: white;
+    transition: 0.3s;
+}
+
+.profile-card:hover {
+    transform: scale(1.02);
+}
+
+/* Dark gradient at the bottom for text visibility */
+.card-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.user-name {
+    margin: 0;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+}
+
+.rating-info {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.star-icons {
+    color: #ff9d00;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.rating-num {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Small Circle Profile Image */
+.user-avatar {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+/* new updated css */
+.card-grid {
+    display: grid;
+    /* Ek row mein 4 cards, jo resize nahi honge zyada */
+    grid-template-columns: repeat(4, 200px); 
+    gap: 25px;
+    justify-content: center;
+}
+/* Rating cards */
+/* Container for the cards */
+.card-grid {
+    display: grid;
+    /* Isse ek line mein 4 cards aayenge aur baaki niche shift honge */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Card Styling */
+.rating-card {
+    position: relative;
+    height: 380px; /* Card ki lambai */
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.rating-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Dark gradient at the bottom */
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45%;
+    background: linear-gradient(transparent, rgba(0,0,0,0.85));
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+}
+
+.user-name {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+    font-family: sans-serif;
+}
+
+.rating-info {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.stars {
+    color: #fbbf24; /* Golden yellow */
+    font-size: 12px;
+    margin-right: 8px;
+}
+
+.score {
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+/* Round Profile Image on Card */
+.floating-avatar {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Responsive adjustment for Mobile */
+@media (max-width: 1024px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* footer css */
+footer{
+    background-color: #001f3f;
+    color: #ffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+    padding-top: 50px;
+}
+.containerforfooter{
+    width: 1140px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.footer{
+    width: 33.3%;
+}
+h3{
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.footercontent p{
+width: 190px;
+margin: auto;
+padding: 7px;
+}
+.footercontent ul{
+    text-align: center;
+}
+.list{
+    padding: 0;
+}
+.list li{
+    width: auto;
+    text-align: center;
+    list-style: none;
+    padding: 7px;
+    position: relative;
+}
+.list li::before{
+    content: '';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top:100%;
+    width: 0;
+    height: 2px;
+    background: #3498db;
+    transition-duration: .5s;
+}
+.list li:hover::before{
+    width: 70px;
+}
+.social-icons{
+    text-align: center;
+    padding: 0%;
+}
+.social-icons li{
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+}
+.social-icons i{
+    color: white;
+    font-size: 25px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #3498db;
+}
+.social-icons i:hover{
+    color: orange;
+}
+.bottombar{
+    background-color: #2c3e50;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+.bottombar p{
+color:#ecf0f1;
+margin: 0%;
+font-size: 16px;
+padding: 7px;
+font-size: large;
+}
+    </style>
+</head>
+<body>
+    <div class="maindiv">
+       <div class="navbar">
+        <h1 class="logo">Blue Horizon Estates</h1>
+      <nav>
+        
+        <a href="#">Rent</a>
+        <a href="#">Buy</a>
+        <a href="#">Sell</a>
+           <a href="#">About</a>
+           <button>Login</button>
+      <button>Sign in</button>
+      </nav>
+       </div>
+    <div class="maincontent">
+        <h1 class="heading1">Find  a  Place </h1>
+        <h1 class="heading2">  Where  You  Can </h1>
+        <h1 class="heading3">be  Yourself.</h1>
+        <p class="paraL1">if you are looking for a place where you can be yourself,</p>
+        <p class="paraL2">don't give up.Keep Searching until you find a place that feels like home.</p>
+        <div class="search-container">
+  <form class="search-bar">
+    <div class="search-group">
+      <label>Want to</label>
+      <select>
+        <option>Rent</option>
+        <option>Buy</option>
+      </select>
+    </div>
+
+    <div class="search-group">
+      <label>Property type</label>
+      <select>
+        <option>Any</option>
+        <option>House</option>
+        <option>Apartment</option>
+      </select>
+    </div>
+
+    <div class="search-group">
+      <label>Location</label>
+      <input type="text" placeholder="Street, City, Zip...">
+    </div>
+
+    <button type="submit" class="search-btn">
+      <span class="icon">🔍</span> Search
+    </button>
+  </form>
+</div>
+    </div>
+    </div>
+    <div class="seconddiv">
+   <div class="thirdheadingdiv">
+    <h2 class="mainheading">
+        Best Home in your City
+    </h2>
+ <p class="mainparaone">Find the best properties in the city heart.</p>
+ <p class="mainparatwo">From modern apartments to spacious family villas</p>
+ <p class="mainparathree"> our hand-picked listings and start your next chapter today.</p>
+ 
+
+ <button class="centerbutton">Explore more</button>
+ <div class="cards-container">
+
+    <!-- Card 1 -->
+    <div class="property-card">
+        <div class="property-img">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="">
+        </div>
+        <div class="property-content">
+            <h2 class="price">$475.22</h2>
+            <h3 class="title">The Real Estate Group</h3>
+            <p class="address">
+                2118 Thornridge Cir, Syracuse, Connecticut 35624
+            </p>
+
+            <div class="details">
+                <span>🛏 8 Bed</span>
+                <span>🛁 5 Bath</span>
+                <span>📐 1240 sqft</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="property-card">
+        <div class="property-img">
+            <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" alt="">
+        </div>
+        <div class="property-content">
+            <h2 class="price">$576.28</h2>
+            <h3 class="title">757 Realty</h3>
+            <p class="address">
+                4140 Parker Rd, Allentown, New Mexico 31134
+            </p>
+
+            <div class="details">
+                <span>🛏 6 Bed</span>
+                <span>🛁 6 Bath</span>
+                <span>📐 1260 sqft</span>
+               
+            <span>📐 1820 sqft</span>
+        </div>
+    </div>
+</div>
+<!-- Card3 -->
+<div class="property-card">
+        <div class="property-img">
+            <img src="home2.jpg" alt="">
+        </div>
+        <div class="property-content">
+            <h2 class="price">$489.28</h2>
+            <h3 class="title">757 Realty</h3>
+            <p class="address">
+                4890 Parker Rd, Allentown, America 31137
+            </p>
+
+            <div class="details">
+                <span>🛏 3 Bed</span>
+                <span>🛁 3 Bath</span>
+                <span>📐 900 sqft</span>
+               
+            <span>📐 1150 sqft</span>
+        </div>
+    </div>
+</div>
+<!-- Card4 -->
+ <div class="property-card">
+        <div class="property-img">
+            <img src="homes3.avif" alt="">
+        </div>
+        <div class="property-content">
+            <h2 class="price">$789.25</h2>
+            <h3 class="title">650 Realty</h3>
+            <p class="address">
+                3560 intanbul , Allentown, Turkey 8906
+            </p>
+
+            <div class="details">
+                <span>🛏 5 Bed</span>
+                <span>🛁 3 Bath</span>
+                <span>📐 1070 sqft</span>
+               
+            <span>📐 1170 sqft</span>
+        </div>
+    </div>
+</div>
+<!-- card5 -->
+ <div class="property-card">
+        <div class="property-img">
+            <img src="home4.jpg" alt="">
+        </div>
+        <div class="property-content">
+            <h2 class="price">$444.20</h2>
+            <h3 class="title">658 Realty</h3>
+            <p class="address">
+                3560 Ankara , Allentown, Turkey 8906
+            </p>
+
+            <div class="details">
+                <span>🛏 6 Bed</span>
+                <span>🛁 4 Bath</span>
+                <span>📐 1285 sqft</span>
+               
+            <span>📐 1890 sqft</span>
+        </div>
+    </div>
+</div>
+<!-- card6 -->
+ <div class="property-card">
+        <div class="property-img">
+            <img src="home5.jpg" alt="">
+        </div>
+        <div class="property-content">
+            <h2 class="price">$444.20</h2>
+            <h3 class="title">658 Realty</h3>
+            <p class="address">
+                3560 Ankara , Allentown, Turkey 8906
+            </p>
+
+            <div class="details">
+                <span>🛏 6 Bed</span>
+                <span>🛁 4 Bath</span>
+                <span>📐 1285 sqft</span>
+               
+            <span>📐 1890 sqft</span>
+        </div>
+    </div>
+</div>
+<!-- card7 -->
+  <div class="property-card">
+        <div class="property-img">
+            <img src="home6.jpg" alt="">
+        </div>
+        <div class="property-content">
+            <h2 class="price">$444.20</h2>
+            <h3 class="title">658 Realty</h3>
+            <p class="address">
+                3560 Ankara , Allentown, Turkey 8906
+            </p>
+
+            <div class="details">
+                <span>🛏 6 Bed</span>
+                <span>🛁 4 Bath</span>
+                <span>📐 1285 sqft</span>
+               
+            <span>📐 1890 sqft</span>
+        </div>
+    </div>
+</div>
+<!-- card8 -->
+  <div class="property-card">
+        <div class="property-img">
+            <img src="home7.jpg" alt="">
+        </div>
+        <div class="property-content">
+            <h2 class="price">$444.20</h2>
+            <h3 class="title">658 Realty</h3>
+            <p class="address">
+                3560 Ankara , Allentown, Turkey 8906
+            </p>
+
+            <div class="details">
+                <span>🛏 6 Bed</span>
+                <span>🛁 4 Bath</span>
+                <span>📐 1285 sqft</span>
+               
+            <span>📐 1890 sqft</span>
+        </div>
+    </div>
+</div>
+<!-- card9 -->
+  <div class="property-card">
+        <div class="property-img">
+            <img src="home8.jpg" alt="">
+        </div>
+        <div class="property-content">
+            <h2 class="price">$444.20</h2>
+            <h3 class="title">658 Realty</h3>
+            <p class="address">
+                3560 Ankara , Allentown, Turkey 8906
+            </p>
+
+            <div class="details">
+                <span>🛏 6 Bed</span>
+                <span>🛁 4 Bath</span>
+                <span>📐 1285 sqft</span>
+               
+            <span>📐 1890 sqft</span>
+        </div>
+    </div>
+</div>
+<!-- card10 -->
+<div class="property-card">
+        <div class="property-img">
+            <img src="home9.jpg" alt="">
+        </div>
+        <div class="property-content">
+            <h2 class="price">$444.20</h2>
+            <h3 class="title">658 Realty</h3>
+            <p class="address">
+                3560 Ankara , Allentown, Turkey 8906
+            </p>
+
+            <div class="details">
+                <span>🛏 6 Bed</span>
+                <span>🛁 4 Bath</span>
+                <span>📐 1285 sqft</span>
+               
+            <span>📐 1890 sqft</span>
+        </div>
+    </div>
+</div>
+<!-- card11 -->
+ <div class="property-card">
+        <div class="property-img">
+            <img src="home10.jpg" alt="">
+        </div>
+        <div class="property-content">
+            <h2 class="price">$444.20</h2>
+            <h3 class="title">658 Realty</h3>
+            <p class="address">
+                3560 Ankara , Allentown, Turkey 8906
+            </p>
+
+            <div class="details">
+                <span>🛏 6 Bed</span>
+                <span>🛁 4 Bath</span>
+                <span>📐 1285 sqft</span>
+               
+            <span>📐 1890 sqft</span>
+        </div>
+    </div>
+</div>
+<!-- card11 -->
+ <div class="property-card">
+        <div class="property-img">
+            <img src="home12.jpg" alt="">
+        </div>
+        <div class="property-content">
+            <h2 class="price">$444.20</h2>
+            <h3 class="title">658 Realty</h3>
+            <p class="address">
+                3560 Ankara , Allentown, Turkey 8906
+            </p>
+
+            <div class="details">
+                <span>🛏 6 Bed</span>
+                <span>🛁 4 Bath</span>
+                <span>📐 1285 sqft</span>
+               
+            <span>📐 1890 sqft</span>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div> 
+   <div class="main-container">
+    <div class="image-box">
+        <img src="Advertisement.jpg" alt="House">
+    </div>
+
+    <div class="text-box">
+        <h2 class="heading">We Specialize In Quality Home Renovations</h2>
+        <p class="description">
+            Looking to renovate your home to reflect your style and personality? 
+            Look no further than our team of experts who specialize in quality 
+            home renovations.
+        </p>
+
+        <div class="features">
+            <div class="item"><span class="check">✓</span> Smart Home</div>
+            <div class="item"><span class="check">✓</span> Beautiful Scene Around</div>
+            <div class="item"><span class="check">✓</span> Exceptional lifestyle</div>
+            <div class="item"><span class="check">✓</span> Complete 24/7 Security</div>
+        </div>
+    </div>
+</div>
+<!-- Ad no 2 -->
+<section class="renovation-section">
+    <div class="container">
+        <div class="image-area">
+            <img src="historical home.webp" alt="Home Renovation">
+        </div>
+
+        <div class="content-area">
+            <h2 class="main-heading">We Are Experts In Historic Home Renovations</h2>
+            
+            <p class="sub-text">
+                Looking to renovate your home to reflect your style and personality? 
+                Look no further than our team of experts who specialize in quality 
+                home renovations to transform your space into a dream home you'll love.
+            </p>
+
+            <ul class="feature-list">
+                <li><span class="icon">✓</span> Smart Home</li>
+                <li><span class="icon">✓</span> Beautiful Scene Around</li>
+                <li><span class="icon">✓</span> Exceptional lifestyle</li>
+                <li><span class="icon">✓</span> Complete 24/7 Security</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="testimonial">
+    <div class="container">
+        
+        <div class="header-flex">
+            <h2 class="h2-title">We help 1000+ <br> Family Find there<br>True Homes</h2>
+            <button class="view-btn">View Stories </button>
+        </div>
+
+        <div class="avatar-group">
+            <img src="advertisements.jpg" alt="user">
+            <img src="Advertisement.jpg" alt="user">
+            <img src="download.jpg" alt="user">
+            <div class="more-avatar">99+</div>
+        </div>
+    </div>
+</section>
+<!-- Rating Cards -->
+ <div class="divforratecards">
+ <div class="card-grid">
+    <div class="rating-card" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400');">
+        <div class="card-overlay">
+            <p class="user-name">Chris Traeger</p>
+            <div class="rating-info">
+                <span class="stars">★★★★★</span>
+                <span class="score">5.0</span>
+            </div>
+        </div>
+        <div class="floating-avatar" style="background-image: url('https://randomuser.me/api/portraits/men/32.jpg');"></div>
+    </div>
+ 
+    <div class="rating-card" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400');">
+        <div class="card-overlay">
+            <p class="user-name">Duke Silver</p>
+            <div class="rating-info">
+                <span class="stars">★★★★★</span>
+                <span class="score">5.0</span>
+            </div>
+        </div>
+        <div class="floating-avatar" style="background-image: url('https://randomuser.me/api/portraits/men/44.jpg');"></div>
+    </div>
+
+    <div class="rating-card" style="background-image: url('https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=400');">
+        <div class="card-overlay">
+            <p class="user-name">Ben Wyatt</p>
+            <div class="rating-info">
+                <span class="stars">★★★★★</span>
+                <span class="score">4.9</span>
+            </div>
+        </div>
+        <div class="floating-avatar" style="background-image: url('https://randomuser.me/api/portraits/men/11.jpg');"></div>
+    </div>
+
+    <div class="rating-card" style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400');">
+        <div class="card-overlay">
+            <p class="user-name">April Ludgate</p>
+            <div class="rating-info">
+                <span class="stars">★★★★★</span>
+                <span class="score">5.0</span>
+            </div>
+        </div>
+        <div class="floating-avatar" style="background-image: url('https://randomuser.me/api/portraits/women/44.jpg');"></div>
+    </div>
+
+    <div class="rating-card" style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400');">
+        <div class="card-overlay">
+            <p class="user-name">Ron Swanson</p>
+            <div class="rating-info">
+                <span class="stars">★★★★★</span>
+                <span class="score">5.0</span>
+            </div>
+        </div>
+        <div class="floating-avatar" style="background-image: url('https://randomuser.me/api/portraits/men/5.jpg');"></div>
+    </div>
+
+    <div class="rating-card" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400');">
+        <div class="card-overlay">
+            <p class="user-name">Leslie Knope</p>
+            <div class="rating-info">
+                <span class="stars">★★★★★</span>
+                <span class="score">5.0</span>
+            </div>
+        </div>
+        <div class="floating-avatar" style="background-image: url('https://randomuser.me/api/portraits/women/65.jpg');"></div>
+    </div>
+
+    <div class="rating-card" style="background-image: url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?w=400');">
+        <div class="card-overlay">
+            <p class="user-name">Tom Haverford</p>
+            <div class="rating-info">
+                <span class="stars">★★★★★</span>
+                <span class="score">4.8</span>
+            </div>
+        </div>
+        <div class="floating-avatar" style="background-image: url('https://randomuser.me/api/portraits/men/22.jpg');"></div>
+    </div>
+
+    <div class="rating-card" style="background-image: url('https://images.unsplash.com/photo-1513584684374-8bdb7483ef8f?w=400');">
+        <div class="card-overlay">
+            <p class="user-name">Ann Perkins</p>
+            <div class="rating-info">
+                <span class="stars">★★★★★</span>
+                <span class="score">5.0</span>
+            </div>
+        </div>
+        <div class="floating-avatar" style="background-image: url('https://randomuser.me/api/portraits/women/32.jpg');"></div>
+    </div>
+ </div>
+    <footer>
+        <div class="containerforfooter">
+            <div class="footercontent">
+                <h3>Contact Us</h3>
+                <p>Email:info@realstate.com</p>
+                <p>Phone:+9236783578</p>
+                <p>Address:adress 123streets</p>
+            </div>
+            <div class="footercontent">
+                <h3>Quick Links</h3>
+                <ul class="list">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Products</a></li>
+                      <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footercontent">
+                <h3>Follow Us</h3>
+                <li><a href=""><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+                <li><a href=""><i class="fab fa-twitter"></i>Instagram</a></li>
+                <li><a href=""><i class="fab fa-instagram"></i>Twitter</a></li>
+                <li><a href=""><i class="fab fa-linkdin"></i>LinkedIn</a></li>
+            </div>8
+        </div>
+        <div class="bottombar">
+            <p>&copy; 2025 your Company.All rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
